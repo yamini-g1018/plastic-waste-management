@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="rp.css">
+    <title>Image Slideshow</title>
+</head>
+<body>
+    <div class="slideshow-container">
+      <h1>Step by step process of recycling</h1>
+        <div class="slide fade">
+            <img src="rp1.png" alt="Image 1">
+            <div class="text">
+                <h2>step:1-Collection and distribution</h2>
+                <p>The first step in the mechanical recycling process is the collection </p>
+            </div>
+        </div>
+        <div class="slide fade">
+            <img src="rp2.png" alt="Image 2">
+            <div class="text">
+                <h2>step:2-Sorting and categorizing</h2>
+                <p>The next step in the plastic recycling process is sorting. There are
+                  several different types of plastic, which need to be separated from each other by recylers</p>
+            </div>
+        </div>
+        <div class="slide fade">
+            <img src="rp3.png" alt="Image 3">
+            <div class="text">
+                <h2>step:3-Washing</h2>
+                <p>Washing is a crucial step in the plastic recycling process since it removes some 
+                  of the impurities that can impede the operation, or completely ruin a batch of recycled plastic</p>
+            </div>
+        </div>
+        <div class="slide fade">
+            <img src="rp4.png" alt="Image 4">
+            <div class="text">
+                <h2>step:4-Shredding</h2>
+                <p>he plastic is then fed into shredders, which break it down into much smaller pieces.
+                  These smaller pieces, unlike formed plastic products, can be processed in the next stages for reuse</p>
+            </div>
+        </div>
+        <div class="slide fade">
+            <img src="rp5.png" alt="Image 5">
+            <div class="text">
+                <h2>Step:5- Identification and separation of plastics</h2>
+                <p>The plastic pieces are tested for their class and quality.They are segregated based on
+                  density, which is tested by floating the particles of plastic in a container of water</p>
+            </div>
+        </div>
+        <div class="slide fade">
+            <img src="rp6.png" alt="Image 6">
+            <div class="text">
+                <h2>Step:6- Extruding + compounding</h2>
+                <p>This final plastic recycling process step is where the particles of shredded plastic are transformed 
+                  into a usable product for manufactures</p>
+            </div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <div class="dot-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+    </div>
+
+    <script>
+        let slideIndex = 0;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n - 1);
+        }
+
+        function showSlides(n) {
+            let slides = document.getElementsByClassName("slide");
+            let dots = document.getElementsByClassName("dot");
+            if (n >= slides.length) {slideIndex = 0}    
+            if (n < 0) {slideIndex = slides.length - 1}    
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex].style.display = "block";  
+            dots[slideIndex].className += " active";
+        }
+    </script>
+</body>
+</html>

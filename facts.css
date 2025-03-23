@@ -1,0 +1,225 @@
+.facts{
+    width: 80%;
+    height: 80vh;
+    margin: auto;
+    text-align: center;
+}
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+.row1{
+    margin-top: 3%;
+    display: flex;
+    justify-content: space-between;
+}
+.row2{
+    margin-top: 3%;
+    display: flex; 
+    justify-content: space-between;
+}
+.col{
+    flex-basis: 31%;
+    background: #81D8D0;
+    border-radius: 10px;
+    margin-bottom: 2%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+.col:hover{
+    box-shadow: 0 0 30px 0px rgba(0,0,0,0.3);
+}
+
+.chart-container {
+    background-color: #40E0D0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.chart-warp{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.pie-chart {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+   background: 
+   conic-gradient(
+    #ff4b5c 0% 28%,   
+    #36a2eb 28% 43%,      
+    #ffcd56 43% 51%,     
+    #4bc0c0 51% 57%,      
+    #9966ff 57% 62%,
+    #ff6384 62% 65%,
+    #ff9f40 65% 69%,
+    #ffc107 69% 72%,
+    #36b2a1 72% 75%, 
+    #00FF00 75% 100%
+   );
+    
+}
+.chart-info h1{
+    text-transform: capitalize;
+    font-size: 30px;
+    text-align: center;
+}
+.chart-info ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.chart-info ul li{
+    margin-bottom: 10px;
+    font-size: 30px;
+    text-align: right;
+}
+.chart-info ul li span{  
+    width: 30px;
+    height: 50px;
+    border-radius: 6px;
+    margin-left: 40px;
+    display: inline-block;
+}
+.head h1{
+    background-color:silver;
+    margin-top: 6%;
+}
+.banner1,.banner2,.banner3,.banner4{
+    margin-top: 0px;
+    height: 95vh;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    overflow: hidden;
+}
+img{
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.text-box{
+    width: 600px;
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    color: #fff;
+}
+.text-box h1{
+    margin-top: 40px;
+    color: #000000;
+}
+.text-box p{
+    font-size: 20px;
+    line-height: 18px;
+    margin-top: 40px;
+    color: #000000;
+}
+.banner4 h1{
+    margin-top: 40px;
+    color: #000000;
+}
+.banner4 p{
+    font-size: 20px;
+    line-height: 18px;
+    margin-top: 40px;
+    color: #FFFFFF;
+}
+.text-box span{
+    background: red;
+    height: 1px;
+    width: 100px;
+    position: absolute;
+    left: 0;
+}
+.banner1{
+    animation: cp-1 12s linear infinite;
+}
+.banner2{
+    animation: cp-2 12s linear infinite;
+}
+.banner3{
+    animation: cp-3 12s linear infinite;
+}
+.banner4{
+    animation: cp-4 12s linear infinite;
+}
+@keyframes cp-1{
+    0%{
+        visibility: visible;
+    }
+    25%{
+        visibility: hidden;
+    }
+    50%{
+        visibility: hidden;
+    }
+    75%{
+        visibility: hidden;
+    }
+    100%{
+        visibility: visible;
+    }
+}
+@keyframes cp-2{
+    0%{
+        visibility: hidden;
+    }
+    25%{
+        visibility: hidden;
+    }
+    50%{
+        visibility: visible;
+    }
+    75%{
+        visibility: hidden;
+    }
+    100%{
+        visibility: hidden;
+    }
+}
+@keyframes cp-3{
+    0%{
+        visibility: hidden;
+    }
+    25%{
+        visibility: hidden;
+    }
+    50%{
+        visibility: hidden;
+    }
+    75%{
+        visibility: visible;
+    }
+    100%{
+        visibility: hidden;
+    }
+}
+@keyframes cp-4{
+    0%{
+        visibility: hidden;
+    }
+    25%{
+        visibility: hidden;
+    }
+    50%{
+        visibility: hidden;
+    }
+    75%{
+        visibility: hidden;
+    }
+    100%{
+        visibility: visible;
+    }
+}
